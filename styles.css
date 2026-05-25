@@ -270,3 +270,51 @@ body {
 .additional-info__languages-item {
   color: var(--secondary-text-color);
 }
+
+/* Timeline styles */
+.timeline__main-header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.timeline__section {
+  margin-bottom: 30px;
+}
+
+.timeline__section:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__section-header-durability {
+  color: var(--primary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--text-decoration-color);
+  display: inline-block;
+}
+
+.timeline__item {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__item-title {
+  color: var(--primary-text-color);
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.timeline__item-text {
+  color: var(--secondary-text-color);
+  text-align: justify;
+}
