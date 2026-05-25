@@ -18,3 +18,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Skills accordion logic
+document.addEventListener('DOMContentLoaded', () => {
+  const accordionTriggers = document.querySelectorAll(
+    '.skills-accordion__trigger',
+  );
+
+  accordionTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', function () {
+      const currentItem = this.parentElement;
+      const currentContent = this.nextElementSibling;
+
+      const isOpen = currentItem.classList.contains('is-open');
+
+      document.querySelectorAll('.skills-accordion__item').forEach((item) => {
+        item.classList.remove('is-open');
+        item.querySelector('.skills-accordion__content').style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        currentItem.classList.add('is-open');
+        currentContent.style.maxHeight = currentContent.scrollHeight + 'px';
+      }
+    });
+  });
+});
